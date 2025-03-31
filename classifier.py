@@ -1,6 +1,6 @@
 # classifier.py
 import tensorflow as tf
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, preprocess_input, decode_predictions
+from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input, decode_predictions
 from tensorflow.keras.preprocessing import image
 import numpy as np
 from PIL import Image # Use Pillow for loading image from bytes
@@ -10,7 +10,7 @@ from PIL import Image # Use Pillow for loading image from bytes
 def load_model():
     """Loads the pre-trained MobileNetV2 model."""
     print("Loading pre-trained model (MobileNetV2)...")
-    model = MobileNetV2(weights='imagenet')
+    model = ResNet50(weights='imagenet')
     print("Model loaded.")
     return model
 
